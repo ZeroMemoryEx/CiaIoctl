@@ -21,16 +21,16 @@ IomCreateClose(
 	PIO_STACK_LOCATION stack = IoGetCurrentIrpStackLocation(Irp);
 	switch (stack->Parameters.DeviceIoControl.IoControlCode)
 	{
-	case IRP_MJ_CREATE:
-	{
-		DbgPrint("IRP_MJ_CREATE");
-		break;
-	}
-	case IRP_MJ_CLOSE:
-	{
-		DbgPrint("IRP_MJ_CLOSE");
-		break;
-	}
+		case IRP_MJ_CREATE:
+		{
+			DbgPrint("IRP_MJ_CREATE");
+			break;
+		}
+		case IRP_MJ_CLOSE:
+		{
+			DbgPrint("IRP_MJ_CLOSE");
+			break;
+		}
 	}
 	Irp->IoStatus.Status = STATUS_SUCCESS;
 	Irp->IoStatus.Information = 0;
