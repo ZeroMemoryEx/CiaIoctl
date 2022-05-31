@@ -15,7 +15,7 @@ int wmain(void) {
 		0, 0, nullptr, 0, &lpBytesReturned, nullptr))
 		printf("success!\n");
 	else
-		printf("Faild !%s (error=%d)\n", GetLastError());
+		printf("Faild !%s %d\n", "error message ",GetLastError());
 	CloseHandle(hdevice);
 	system("pause");
 	return (0);
