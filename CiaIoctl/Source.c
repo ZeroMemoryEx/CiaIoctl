@@ -51,13 +51,13 @@ DeviceChangeControl(
 	DbgPrint("CIA is here \n");
 	switch (stack->Parameters.DeviceIoControl.IoControlCode)
 	{
-	case IOCTL_CIA_CONTROL:
-	{
-		DbgPrint("CIA \n");
-		break;
-	}
-	default:
-		break;
+		case IOCTL_CIA_CONTROL:
+		{
+			DbgPrint("CIA \n");
+			break;
+		}
+		default:
+			break;
 	}
 	return STATUS_SUCCESS;
 }
